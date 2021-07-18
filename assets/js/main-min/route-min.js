@@ -1,0 +1,1 @@
+import{Index}from"./index-min.js";export const Route=function(){let n=0;return{build:function(){},getCurrentPageId:function(){return n},setCurrentPageId:function(t){n=t}}}();

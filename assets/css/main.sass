@@ -1,0 +1,700 @@
+@import 'default.1.3'
+  
+$dark: #000
+$mid: #525252
+$light: #fff
+$red: #FF4624
+
+html, body
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  overflow: hidden
+  user-select: none
+  webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  
+body
+  // background-color: $dark
+  overflow: hidden
+  color: $light
+  font-family: 'CircularBook'
+  position: fixed
+  height: 100vh
+  font-size: 16px
+  line-height: 24px
+  // letter-spacing: 1px
+
+#container
+  z-index: 99
+  position: absolute
+  opacity: 0
+
+#video
+  display: none
+
+#ui
+  z-index: 9999
+  position: absolute
+  display: flex
+  justify-content: center
+  width: 100%
+  height: 100%
+  #uiInner
+    display: flex
+    align-self: center
+.uiLine
+  padding: 30px
+  cursor: pointer
+.uiLine:hover
+  border-bottom: 2px solid $light
+
+#logo
+  // width: 100%
+  position: absolute
+  // text-align: center
+  left: 0
+  opacity: 0
+  z-index: 999999
+  cursor: pointer
+  #logoInner
+    margin: auto 0
+    padding: 40px
+
+#motto
+  z-index: 9999
+  position: absolute
+  display: flex
+  justify-content: center
+  width: 100%
+  height: 100%
+  #mottoInner
+    font-size: 30px
+    letter-spacing: 0
+    display: flex
+    align-self: center  
+    padding: 65px
+
+.homeSlide
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  // justify-content: center
+  .homeSlideInner
+    display: inline-block
+    align-self: center  
+    padding: 40px
+    max-width: 600px
+    z-index: 999999
+    position: absolute
+
+
+.desktop
+  .homeSlideInner
+    max-width: 238px
+    margin-left: calc( 50% - 80px )
+
+#homeSlide1
+  justify-content: center
+  .homeSlideInner
+    margin-left: 0
+    font-size: 22px
+    max-width: 540px
+    line-height: 30px
+    text-align: center
+.mobile
+  #homeSlide1
+    .homeSlideInner
+      max-width: 275px
+      text-align: center
+      font-size: 18px
+      line-height: 26px
+
+#homeSlideEnd
+  .homeSlideInner
+    margin: 0 auto
+    max-width: unset !important
+    position: relative
+  .homeSlideEndBox
+    display: inline-block
+    max-width: 400px
+    vertical-align: top
+    padding: 40px
+  .homeSlideEndHeader
+    font-size: 24px
+    color: white
+  .homeSlideEndLink
+    font-size: 24px
+    color: white
+    border-bottom: 1px solid #fff
+    @include transition(border 0.5s)
+    padding-bottom: 5px
+
+  .homeSlideEndLink:hover
+    border-bottom: 4px solid #fff
+
+.mobile
+  .homeSlideEndHeader
+    font-size: 18px !important
+  .homeSlideEndLink
+    font-size: 18px !important
+
+
+
+// NEWSLETTER FORM
+
+#mc-embedded-subscribe-form
+  padding: 0 !important
+
+#mc_embed_signup
+  max-width: 400px
+  margin: 0 auto
+  text-align: center
+
+#mc_embed_signup_scroll
+  text-align: left
+  padding: 0px
+  color: white
+
+input::placeholder
+  color: white
+
+#mce-EMAIL // input
+  text-align: left
+  margin-bottom: 20px
+  // background-color: rgba(255,255,255,0.8) !important
+  background-color: rgba(0,0,0,0.8) !important
+  // border: 1px solid rgba(255,255,255,0.3)
+  // border: none !important
+  color: white !important
+  padding: 0px 8px !important
+  padding-right: 20px !important
+  text-indent: 5px !important
+  width: unset !important
+  display: inline-block !important
+  height: 48px !important
+  border: 1px solid rgba(255,255,255,0.15) !important
+  // border-right: none !important
+  &:focus
+    border: 1px solid white !important
+#mc_embed_signup .button
+  background: none !important
+  border: 1px solid rgba(255,255,255,0.1) !important
+  height: unset !important
+  padding: 0px 20px !important
+  @include transition(border 0.5s)
+  display: inline-block
+  height: 50px !important
+  margin: 0 !important
+  // margin-top: 10px !important
+
+#mc_embed_signup .button:hover
+  border: 1px solid rgba(255,255,255,1) !important
+
+.inputContainer
+  text-align: right
+  display: inline-block
+  vertical-align: top
+
+.mce_inline_error // error
+  color: white !important
+  background: none !important
+  line-height: 16px !important
+  padding: 0 !important
+  display: block !important
+
+#mce-error-response
+  padding: 0 !important
+  margin: 0 !important
+  font-weight: normal !important
+  margin-bottom: 20px !important
+
+#mce-responses
+  width: 100% !important
+
+#mc_embed_signup #mce-success-response // success
+  margin-top: 0 !important
+  padding-top: 0 !important
+  color: white !important
+  font-weight: normal !important
+  padding: 0 !important
+
+#mce-responses
+  padding: 0 !important
+  margin: 0 !important
+
+#mc_embed_signup div.response
+  width: 100% !important
+
+.mc-field-group
+  padding-bottom: 0 !important
+  width: 100% !important
+  input[type="email"]
+    &:focus
+      border: 1px solid white !important
+
+#homeSlideEndSeperatorDesktop
+  // height: 100%
+  width: 1px
+  background-color: rgba(255,255,255,1.0)
+  display: inline-block
+  height: 1px
+
+#homeSlideEndSeperatorMobile
+  // height: 100%
+  width: 1px
+  background-color: rgba(255,255,255,1.0)
+  display: inline-block
+  height: 2px
+  display: none
+
+@media only screen and (max-width: 850px)
+  #mc_embed_signup_scroll
+  .homeSlideEndBox
+    text-align: center !important
+  #mce-EMAIL
+    margin-bottom: 0 !important
+    display: inline-block !important
+    // padding: 10px 0 !important
+    text-indent: 10px !important
+    // border: 1px solid rgba(255,255,255,0.15) !important
+    // border-right: none !important
+  #homeSlideEnd
+    .homeSlideInner
+      padding: 0 !important
+      text-align: center
+  .homeSlideEndBox
+    display: block !important
+    max-width: unset !important
+    padding: 40px 0 !important
+  .homeSlideEndHeader
+    text-align: center !important
+  #homeSlideEndSeperatorDesktop
+    // width: 100% !important
+    // height: 1px
+    display: none !important
+  #homeSlideEndSeperatorMobile
+    display: inline-block !important
+  #mc_embed_signup .button
+    // margin-left: 0 !important
+
+
+
+
+
+#mouseIndicator
+  width: 100%
+  position: absolute
+  text-align: center
+  bottom: 0
+  opacity: 0
+  #mouseIndicatorInner
+    font-size: 30px
+    margin: auto 0
+    padding: 65px
+    text-align: center
+    justify-content: center
+    display: flex
+  #mouse
+    position: absolute
+    align-self: center
+  #mousePoint
+    align-self: center
+    position: absolute
+    opacity: 0
+
+// #noise
+//   position: absolute
+//   top: 0
+//   left: 0
+//   width: 100%
+//   height: 100%
+//   background-image: url('../img/noise.gif')
+//   background-repeat: repeat
+//   z-index: 99999
+//   opacity: 0
+//   @include transition(opacity 1s)
+//   pointer-events: none
+
+.opacity15
+  opacity: 0.13 !important
+
+.workType
+  font-size: 11px
+  letter-spacing: 2px
+  font-family: 'CircularBlack'
+  color: gray
+  // margin-bottom: 2px
+  margin-bottom: 20px
+  line-height: 15px
+
+
+.projectName
+  font-size: 20px
+  margin-bottom: 20px
+
+  // display: inline-block
+
+.clientCategory
+  font-size: 20px
+  // margin-bottom: 20px
+  // display: inline-block
+  color: gray
+
+.workDesc
+  margin-bottom: 24px
+
+.buttonContainer
+
+.visitButton
+  // @include border-radius(8px)
+  // border: 1px solid rgba(255,255,255,0.15)
+  // padding: 10px 15px
+  // color: white
+  // display: inline-block
+  // @include transition(border 0.5s)
+
+.visitButton:hover
+  // border: 1px solid rgba(255,255,255,1)
+
+.button1
+  @include border-radius(8px)
+  border: 1px solid rgba(255,255,255,0.15)
+  padding: 10px 15px
+  color: white
+  display: inline-block
+  @include transition(border 0.5s)
+  margin-bottom: 20px
+
+.button1:hover
+  border: 1px solid rgba(255,255,255,1)
+  // background-color: white
+  // color: black
+
+#infoButton
+  position: absolute
+  padding: 40px
+  right: 0
+  bottom: 0
+  font-size: 11px
+  letter-spacing: 2px
+  font-family: 'CircularBlack'
+  color: white
+  // margin-bottom: 2px
+  line-height: 15px
+  opacity: 0
+  cursor: pointer
+  z-index: 99999
+
+.mobile
+  #infoButtonInner
+    -webkit-transform: rotate(90deg)
+    -moz-transform: rotate(90deg)
+    -o-transform: rotate(90deg)
+    -ms-transform: rotate(90deg)
+    transform: rotate(90deg)
+    margin-right: -32px
+    margin-bottom: 27px
+
+
+#infoButtonHover
+  height: 0px
+  width: 112px
+  background-color: #fff
+  position: absolute
+  right: 0
+  bottom: 0px
+
+#info
+  width: 100%
+  height: 100%
+  display: flex
+  z-index: 999999
+  // justify-content: center
+  padding-top: 100px
+  flex-direction: column
+  #infoCloseButton
+    position: absolute
+    top: 0
+    right: 0
+    padding: 40px
+    cursor: pointer
+  .infoSubBox
+    // align-self: center
+    // text-align: center
+    // width: 100%
+    opacity: 0
+    padding: 20px 40px
+    // margin-bottom: 100px
+    // border-top: 1px solid rgba(255,255,255,0.1)
+  .infoSubHeader
+    font-size: 11px
+    letter-spacing: 2px
+    font-family: 'CircularBlack'
+    color: gray
+    // margin-bottom: 2px
+    margin-bottom: 40px
+    line-height: 15px
+  .infoSubContentLine
+    margin-bottom: 20px
+    .button
+      // margin-left: 10px
+      margin-right: 10px
+  #infoContactPin
+    position: absolute
+    margin-top: 4px
+#infoContent
+  margin: 0 auto
+.mobile
+  letter-spacing: 0
+  font-size: 14px
+  line-height: 21px
+  #mottoInner
+    text-align: center
+  .projectName
+    font-size: 16px
+    font-family: 'CircularBlack'
+  .workType
+    font-size: 9px
+  #info1
+    margin-bottom: 20px
+    
+@media only screen and (max-width: 900px)
+  #info1
+    margin-bottom: 20px !important
+
+.hasNavBar
+  #ui, #preloader
+    height: calc( 100vh - 110px )
+
+.desktop
+  #info
+    justify-content: center
+    padding-top: 0px !important
+  .infoSubBox
+    max-width: 700px
+    align-self: center
+    border-top: none !important
+    text-align: center
+  #info1
+    width: 300px
+    display: inline-block
+    text-align: left
+    vertical-align: top
+    font-size: 24px
+    line-height: 32px
+    padding: 0 20px
+  #info2
+    width: 300px
+    display: inline-block
+    text-align: left
+    padding: 0 20px
+    vertical-align: top
+  .infoSubContentLine
+    display: inline-block
+    padding: 20px 20px
+    margin-bottom: 0 !important
+  #infoCloseButtonContainer
+    top: unset
+    right: unset
+    bottom: 0
+    width: 100%
+    text-align: center
+    position: absolute
+  #infoCloseButton
+    position: relative !important
+    width: 100px
+    margin: 0 auto
+    
+
+.forDesktop
+
+.forMobile
+  display: none
+
+.gray
+  color: gray
+
+#sliderNav
+  position: absolute
+  z-index: 9999
+  opacity: 0
+  #sliderNavInner
+    position: relative
+    height: 100px
+    width: 200px
+    margin: 0 auto
+    #sliderNavLabels
+      position: absolute
+      display: flex
+      justify-content: center
+      width: 100%
+      height: 100%
+      // opacity: 0.3
+    #sliderNavLabelsInner
+      align-self: center
+      display: flex
+      justify-content: center
+      font-size: 0
+      #sliderNavCurrent
+        display: inline-block
+        padding: 3px
+        width: 8px
+      #sliderNavSeperator
+        display: inline-block
+        padding: 3px
+        height: 20px
+        margin-top: 3px
+        .sliderNavSeperatorImg
+          width: 3px
+          opacity: 0.2
+          padding-left: 1px
+          padding-right: 1px
+          @include transition(opacity 1s)
+      #sliderNavTotal
+        display: inline-block
+        padding: 3px
+        width: 8px 
+    #sliderNavButtons
+      position: absolute
+      .sliderNavButton
+        cursor: pointer
+        opacity: 0.3
+        @include transition(opacity 1s)
+
+      .sliderNavButton:hover
+        // background-color: #fff
+        opacity: 1
+      #sliderNavLeft
+        padding: 40px
+        display: inline-block
+        #sliderNavLeftImg
+          width: 20px
+      #sliderNavRight
+        display: inline-block
+        padding: 40px
+        #sliderNavRightImg
+          width: 20px
+
+@mixin prelaoderAnim($var)
+  animation: prelaoderAnimLoop  $var infinite
+  -moz-animation: prelaoderAnimLoop $var infinite
+  -webkit-animation: prelaoderAnimLoop $var infinite
+  -o-animation: prelaoderAnimLoop $var infinite
+
+@keyframes prelaoderAnimLoop
+  0%
+    // margin-left: -3px
+    opacity: 1
+  25%
+    // width: 10px
+    // height: 2px
+  50%
+    // margin-left: 3px
+    // width: 6px
+    // height: 6px
+    opacity: 0.5
+  75%
+    // width: 10px
+    // height: 2px
+  100%
+    // margin-left: -3px
+    opacity: 1
+
+@mixin prelaoderAnim2($var)
+  animation: prelaoderAnimLoop2 4s $var infinite
+  -moz-animation: prelaoderAnimLoop2 4s $var infinite
+  -webkit-animation: prelaoderAnimLoop2 4s $var infinite
+  -o-animation: prelaoderAnimLoop2 4s $var infinite
+  animation-timing-function: linear
+
+@keyframes prelaoderAnimLoop2
+  0%
+    // transform: rotate(360deg)
+  100%
+    // transform: rotate(deg)
+    // 
+
+@mixin prelaoderAnim3($var)
+  animation: prelaoderAnimLoop3  $var forwards
+  -moz-animation: prelaoderAnimLoop3  $var forwards
+  -webkit-animation: prelaoderAnimLoop3  $var forwards
+  -o-animation: prelaoderAnimLoop3  $var forwards
+  animation-timing-function: linear
+
+@keyframes prelaoderAnimLoop3
+  0%
+    // transform: rotate(360deg)
+    height: 0
+  100%
+    height: 100px
+    // transform: rotate(deg)
+    // 
+
+#preloader
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  position: absolute
+  #preloaderInner
+    align-self: center
+    // width: 100px
+    // height: 100px
+    // @include prelaoderAnim2(200ms)
+  #preloaderObj
+    align-self: center
+    // @include border-radius(10px)
+    // @include transition(height 500ms)
+    @include prelaoderAnim(200ms)
+    width: 1px
+    height: 10px
+    background-color: #fff
+    position: absolute
+  #preloaderBg
+    align-self: center
+    // @include border-radius(10px)
+    // @include transition(height 1500ms)
+    width: 1px
+    height: 0px
+    background-color: rgba(255,255,255,0.2)
+    position: absolute
+    @include prelaoderAnim3(2500ms)
+  // .preloader1
+  //   height: 10px
+  // .preloader2
+  //   height: 20px
+  // .preloader3
+  //   height: 10px
+  // .preloader4
+  //   height: 20px
+  
+
+
+.mobile
+  #sliderNav
+    right: 0
+    top: 0
+  #sliderNavSeperator
+    margin-top: 0 !important
+  #sliderNavLabels
+    opacity: 1 !important
+  .sliderNavButton
+    opacity: 1 !important
+  #homeSlide1Desktop
+    display: none
+
+.desktop
+  #sliderNav
+    left: 0
+    bottom: 0
+    // width: 100%
+    text-align: center
+    margin-left: calc( 50% - 80px )
+    #sliderNavInner
+  #homeSlide1Mobile
+    display: none
